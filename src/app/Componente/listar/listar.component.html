@@ -1,0 +1,26 @@
+<div class="container my-3">
+    <h2 class="text-center">Lista de autos</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>COLOR</th>
+                <th>PLACA</th>
+                <th>ANIO</th>
+                <th>ACCIONES</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let e of auto">
+                <td>{{e.id}}</td>
+                <td>{{e.color}}</td>
+                <td>{{e.placa}}</td>
+                <td>{{e.anio}}</td>
+                <td>
+                    <a class="btn btn-warning me-2" (click)="Editar(e)"><span class="material-icons">Editar</span></a>
+                    <a class="btn btn-danger" (click)="Eliminar(e)"><span class="material-icons">Eliminar</span></a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
